@@ -1,2 +1,2 @@
 # 1906548310.github.io
-[个人主页](www.guqiangismike.top)
+[个人主页](http://www.guqiangismike.top)
