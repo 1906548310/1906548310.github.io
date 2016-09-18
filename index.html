@@ -43,6 +43,9 @@
 		.icon-bar {
 			background-color:black;
 		}
+		.navbar-nav .active {
+			background-color: #EEEEEE;
+		}
 	</style>
 
 	<!--[if IE]>
@@ -54,7 +57,7 @@
 
 <!-- 背景视频 -->
 <video autoplay="autoplay" muted="0" loop="loop">
-	<source src="MEDIA/background_mp4.mp4" type="">
+	<source src="MEDIA/background_mp4.mp4" type="video/mp4">
 </video>
 
 <div class="mask_index"></div>
@@ -72,7 +75,7 @@
  -->    </div>
     <div class="collapse navbar-collapse" id="myNavbar" style="text-align:center; margin-top:20px;">
       <ul class="nav navbar-nav" style="float:none; display:inline-block;">
-        <li><a href="#myPage">首页</a></li>
+        <li class="active"><a href="#myPage">首页</a></li>
         <li><a href="#band">博客</a></li>
         <li><a href="#tour">作品</a></li>
         <li><a href="#contact">简历</a></li>
