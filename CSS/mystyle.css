@@ -1,0 +1,37 @@
+body {
+	/*background:url('MEDIA/background_mp4.mp4') no-repeat;*/
+	margin:0;
+	padding: 0;
+}
+video {
+	position: fixed;
+	right:0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height:auto;
+	z-index: -9999;
+	/*-webkit-filter:grayscale(100%);*/  /*将图片/视频以灰色形式呈现*/
+}
+.mask_index {
+	width: 100vw;
+	height:100vh;
+	/*background:url(IMG/background_img_index.png) #fff no-repeat cover;*/
+	background-image: url(../IMG/background_img_index.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*opacity:0.8;
+	filter:Alpha(opacity=80); *//* IE8 以及更早的浏览器 */
+}
+.navbar_mike {
+	background-color:transparent;
+	font-size: 20px;
+}
+.icon-bar {
+	background-color:black;
+}
+.navbar-nav .active {
+	background-color: #EEEEEE;
+}
