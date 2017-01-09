@@ -22,6 +22,8 @@ video {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
+    overflow: hidden;
+    position: relative;
 	/*opacity:0.8;
 	filter:Alpha(opacity=80); *//* IE8 以及更早的浏览器 */
 }
@@ -32,17 +34,66 @@ video {
 .icon-bar {
 	background-color:black;
 }
-.navbar-nav .active {
-	background-color: #EEEEEE;
+.nav.navbar-nav {
+    outline: 2px dashed #000;
+    outline-offset: 10px;
+}
+.nav.navbar-nav > li > a:hover,
+.nav.navbar-nav > li > a:active,
+.nav.navbar-nav > li > a:focus {
+	background-color: transparent;
+}
+.nav.navbar-nav > li, .nav.navbar-nav > li > a {
+    overflow: hidden;
+    position: relative;
+}
+.nav.navbar-nav > li:hover:before,
+.nav.navbar-nav > li:hover:after,
+.nav.navbar-nav > li > a:hover:before,
+.nav.navbar-nav > li > a:hover:after {
+	transform: none;
+}
+.nav.navbar-nav > li:before {
+    transform: translate(100%);
+}
+.nav.navbar-nav > li:after {
+    bottom: 0;
+    transform: translate(-100%);
+}
+.nav.navbar-nav > li:before, .nav.navbar-nav > li:after {
+    left: 0;
+    width: 100%;
+    height: .125em;
+}
+.nav.navbar-nav > li > a:before {
+	left: 0;
+    transform: translateY(-100%);
+}
+.nav.navbar-nav > li > a:after {
+	right: 0;
+    transform: translateY(100%);
+}
+.nav.navbar-nav > li > a:before, .nav.navbar-nav > li > a:after {
+	top: 0;
+    width: .125em;
+    height: 100%;
+}
+.nav.navbar-nav > li:before,
+.nav.navbar-nav > li:after,
+.nav.navbar-nav > li > a:before,
+.nav.navbar-nav > li > a:after {
+    position: absolute;
+    background: currentColor;
+    transition: .3s;
+    content: "";
 }
 #blog_center, #work_center, #resume_center {
 	position: absolute;
-	top:50%;
+	top:150%;
 	left: 50%;
 	margin-left: -40vw;
 	margin-top: -35vh;
 	width:80vw;
 	height:70vh;
 	background-color: gray;
-	display:none;
 }

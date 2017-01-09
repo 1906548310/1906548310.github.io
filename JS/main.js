@@ -13,23 +13,40 @@ $(document).ready(function() {
 		//接着将active样式添加到所点击的这个元素上
 		$(this).addClass("active");
 	});
+
 	$('#myNavbar > ul > li:first-child').click(function() {
-		$('.mask_index div').css('display','none');
+		$('.mask_index div').css({
+			'visibility':'hidden',
+			'top':'150%'
+		});
 	});
+
 	$('#myNavbar > ul > li:nth-child(2)').click(function() {
-		$('#blog_center').show();
-		$('#work_center').css('display','none');
-		$('#resume_center').css('display','none');
+		$('#blog_center').css('visibility','visible').css({
+			'top':'55%',
+			'transform':'top',
+			'transition':'0.5s'
+		});
+		$('#work_center').css('visibility','hidden').css('top','150%');
+		$('#resume_center').css('visibility','hidden').css('top','150%');
 	});
 	$('#myNavbar > ul > li:nth-child(3)').click(function() {
-		$('#work_center').show();
-		$('#blog_center').css('display','none');
-		$('#resume_center').css('display','none');
+		$('#work_center').css('visibility','visible').css({
+			'top':'55%',
+			'transform':'top',
+			'transition':'0.5s'
+		});
+		$('#blog_center').css('visibility','hidden').css('top','150%');
+		$('#resume_center').css('visibility','hidden').css('top','150%');
 	});
 	$('#myNavbar > ul > li:nth-child(4)').click(function() {
-		$('#resume_center').show();
-		$('#blog_center').css('display','none');
-		$('#work_center').css('display','none');
+		$('#resume_center').css('visibility','visible').css({
+			'top':'55%',
+			'transform':'top',
+			'transition':'0.5s'
+		});
+		$('#work_center').css('visibility','hidden').css('top','150%');
+		$('#blog_center').css('visibility','hidden').css('top','150%');
 	});
 });
 
