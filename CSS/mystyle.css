@@ -95,5 +95,5 @@ video {
 	margin-top: -35vh;
 	width:80vw;
 	height:70vh;
-	background-color: gray;
+	background-color: rgba(0,0,0,.5);
 }

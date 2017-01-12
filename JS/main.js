@@ -15,7 +15,7 @@ $(document).ready(function() {
 	});
 
 	$('#myNavbar > ul > li:first-child').click(function() {
-		$('.mask_index div').css({
+		$('#blog_center, #work_center, #resume_center').css({
 			'visibility':'hidden',
 			'top':'150%'
 		});
