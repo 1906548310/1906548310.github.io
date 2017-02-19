@@ -48,5 +48,52 @@ $(document).ready(function() {
 		$('#work_center').css('visibility','hidden').css('top','150%');
 		$('#blog_center').css('visibility','hidden').css('top','150%');
 	});
+
+	// G2技能分布
+	var data = [
+	{question: 'Gulp', percent: 0.4},
+	{question: 'Git', percent: 0.5},
+	{question: 'Angular', percent: 0.6},
+	{question: '原生JS', percent: 0.75},
+	{question: 'BootStrap', percent: 0.8},
+	{question: 'jQuery', percent: 0.8},
+	{question: 'CSS', percent: 0.8},
+	{question: 'HTML', percent: 0.85}
+	];
+	var Frame = G2.Frame;
+	var frame = new Frame(data); // 加工数据
+	frame.addCol('odd',function(obj,index){
+	return index % 2;
+	});
+	var chart = new G2.Chart({
+	id: 'c1',
+	forceFit: true,
+	height: 450
+	});
+	var defs = {
+	'percent': {min: 0,max: 1},
+	'odd': {type: 'cat'}
+	};
+	chart.source(frame,defs);
+	chart.tooltip({
+	map: {
+	  value: 'percent',
+	  name: '占比',
+	  title: 'question'
+	}
+	});
+	chart.legend(false);
+	chart.coord('polar',{inner: 0.1}).transpose();
+	chart.interval().position('question*percent')
+	.color('odd',function(value){
+	return ['rgb(224,74,116)', 'rgb(211,0,57)'][value];
+	})
+	.label('percent',{offset: -5});
+	frame.each(function(obj){
+	chart.guide().text([obj.question,0],obj.question + ' ',{
+	  textAlign: 'right'
+	});
+	});
+	chart.render();
 });
 
