@@ -128,6 +128,26 @@ video {
 	height:100px;
 	margin-bottom: 30px;
 }
+#work_center .basic_work:first-child {
+	background-image: url(../IMG/design_work.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#work_center .basic_work:nth-child(2) {
+	background-image: url(../IMG/bookmark.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#work_center .basic_work:nth-child(3) {
+	background-image: url(../IMG/003.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#work_center .basic_work:nth-child(4) {
+	background-image: url(../IMG/004.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 
 #resume_center {
 	background-color: #eee;
