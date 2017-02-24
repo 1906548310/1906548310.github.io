@@ -127,6 +127,22 @@ video {
 	line-height: 100px;
 	height:100px;
 	margin-bottom: 30px;
+	position: relative;
+}
+#work_center .basic_work:after {
+	display: none;
+	content: '作品截图';
+	font-size: 200%;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	bottom: 0;
+	left: 15px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 999;
+}
+#work_center .basic_work:hover:after {
+	display: block;
 }
 #work_center .basic_work:first-child {
 	background-image: url(../IMG/design_work.jpg);
