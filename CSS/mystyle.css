@@ -229,3 +229,10 @@ footer .icon_multi ul li a {
 	height: 100%;
     display: inline-block;
 }
+
+/*屏幕宽度小于400px时，隐藏分享按钮*/
+@media (max-width: 400px) {
+	.icon_multi {
+		display: none;
+	}
+}
