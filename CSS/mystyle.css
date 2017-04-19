@@ -1,9 +1,12 @@
+/*全局样式*/
 body {
 	/*background:url('MEDIA/background_mp4.mp4') no-repeat;*/
 	margin:0;
 	padding: 0;
 	font-size: 14px;
 }
+
+/*背景视频*/
 video {
 	position: fixed;
 	right:0;
@@ -15,6 +18,8 @@ video {
 	z-index: -9999;
 	/*-webkit-filter:grayscale(100%);*/  /*将图片/视频以灰色形式呈现*/
 }
+
+/*半透明遮盖层*/
 .mask_index {
 	width: 100vw;
 	height:100vh;
@@ -28,6 +33,8 @@ video {
 	/*opacity:0.8;
 	filter:Alpha(opacity=80); *//* IE8 以及更早的浏览器 */
 }
+
+/*导航栏*/
 .navbar_mike {
 	background-color:transparent;
 	font-size: 20px;
@@ -88,6 +95,8 @@ video {
     transition: .3s;
     content: "";
 }
+
+/*内容主体*/
 #blog_center, #work_center, #resume_center {
 	position: absolute;
 	top:150%;
@@ -98,6 +107,8 @@ video {
 	height:75vh;
 	overflow-y: auto;
 }
+
+/*博客模块*/
 #blog_center .blog_board {
 	height: auto;
 	color: #fff;
@@ -119,6 +130,7 @@ video {
 	float: right;
 }
 
+/*作品模块*/
 #work_center .basic_work {
 	background-color: red;
 	color:#fff;
@@ -165,6 +177,7 @@ video {
 	background-repeat: no-repeat;
 }
 
+/*简历模块*/
 #resume_center {
 	background-color: #eee;
 	border-radius: 5px;
@@ -230,9 +243,19 @@ footer .icon_multi ul li a {
     display: inline-block;
 }
 
+/*媒体查询*/
 /*屏幕宽度小于400px时，隐藏分享按钮*/
 @media (max-width: 400px) {
 	.icon_multi {
 		display: none;
+	}
+}
+@media (max-width: 768px) {
+	nav.navbar_mike ul {
+		width: 100%;
+	}
+	nav.navbar_mike ul li:hover, nav.navbar_mike ul li:focus {
+		background-color: rgba(241, 252, 29, 0.5);
+		outline: none;
 	}
 }
