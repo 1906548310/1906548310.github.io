@@ -140,7 +140,6 @@ video {
 	height:100px;
 	margin-bottom: 30px;
 	position: relative;
-	cursor: pointer;
 }
 #work_center .basic_work:after {
 	display: none;
