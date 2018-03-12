@@ -153,6 +153,7 @@ video {
 	left: 15px;
 	background-color: rgba(0,0,0,0.5);
 	z-index: 999;
+	cursor: pointer;
 }
 #work_center .basic_work:hover:after {
 	display: block;
