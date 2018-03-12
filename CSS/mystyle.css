@@ -261,6 +261,10 @@ footer .icon_multi ul li a {
 	}
 }
 
-.container {
-	font-size: 30px;
+.container.prowl_car_index li{
+	line-height: 1.5em;
+}
+.container.prowl_car_index li a {
+	font-size: 1.15em;
+	cursor: pointer;
 }
