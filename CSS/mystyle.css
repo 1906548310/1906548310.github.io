@@ -260,3 +260,7 @@ footer .icon_multi ul li a {
 		outline: none;
 	}
 }
+
+.container {
+	font-size: 30px;
+}
